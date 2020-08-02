@@ -15,11 +15,6 @@ SystemTray::~SystemTray()
     disconnect(this, &SystemTray::messageClicked, this, &SystemTray::handleMessageClicked);
 }
 
-void SystemTray::sendNotification()
-{
-
-}
-
 void SystemTray::handleMessageClicked()
 {
     qDebug() << __PRETTY_FUNCTION__ << __LINE__;
