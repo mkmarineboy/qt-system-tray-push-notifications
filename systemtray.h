@@ -2,14 +2,22 @@
 #define SYSTEMTRAY_H
 
 #include <QObject>
+#include <QSystemTrayIcon>
 
-class SystemTray : public QObject
+class SystemTray : public QSystemTrayIcon
 {
     Q_OBJECT
 public:
     explicit SystemTray(QObject *parent = nullptr);
+    ~SystemTray();
 
-signals:
+public Q_SLOTS:
+
+    void handleMessageClicked();
+
+Q_SIGNALS:
+
+private:
 
 };
 
